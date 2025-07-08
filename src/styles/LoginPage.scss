@@ -1,0 +1,113 @@
+@import "../scss/_variable.scss";
+
+.login-wrapper {
+  padding-top: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.login-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.login-box {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 64rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-image {
+  display: none;
+  background-color: lighten($secondary-color, 30%);
+  padding: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  img {
+    height: 18rem;
+    object-fit: contain;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.login-form {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    input {
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      background-color: lighten($secondary-color, 30%);
+      border: 1px solid $secondary-color;
+
+      &::placeholder {
+        color: $primary-color;
+      }
+
+      &:focus {
+        border-color: $secondary-color;
+        outline: none;
+        box-shadow: 0 0 0 1px $primary-color;
+      }
+    }
+
+    button {
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+      padding: 0.5rem 0.5rem;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 20%);
+      }
+    }
+  }
+
+  p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: lighten($primary-color, 10%);
+
+    span {
+      color: lighten($primary-color, 10%);
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: underline;
+        color: $primary-color;
+      }
+    }
+  }
+}
