@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../components/Sidebar";
 
 const ProfilePage = () => {
   return (
-    <div>ProfilePage</div>
-  )
-}
+    <>
+      <Sidebar />
+      <div className="profile-page">
+        <h1>Profile Page</h1>
+        {/* Add profile details here */}
+      </div>
+    </>
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;

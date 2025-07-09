@@ -1,0 +1,56 @@
+@import "../scss/_variable.scss";
+
+.header-nav {
+  background-color: $primary-color;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  background-color: lighten($secondary-color, 30%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px $primary-color;
+
+  .logo-img {
+    height: 2.5rem;
+    margin: 0.5rem;
+  }
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .bar {
+    background-color: lighten($secondary-color, 30%);
+    height: 0.25rem;
+    border-radius: 9999px;
+
+    &.bar-long {
+      width: 8rem;
+    }
+
+    &.bar-short {
+      width: 6rem;
+    }
+  }
+
+  .search-btn {
+    background-color: $primary-color;
+    border: none;
+    cursor: pointer;
+
+    .search-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: lighten($secondary-color, 30%);
+    }
+
+    &:focus {
+      color: darken($primary-color, 20%);
+    }
+  }
+}
