@@ -28,7 +28,7 @@ export default function RegisterPage() {
                   required
                 />
               </form>
-                <h3>Shop Details</h3>
+              <h3>Shop Details</h3>
               <form>
                 <input type="text" placeholder="Name" required />
                 <input type="text" placeholder="Address" required />

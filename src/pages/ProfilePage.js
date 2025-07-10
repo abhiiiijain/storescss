@@ -20,46 +20,46 @@ export default function ProfilePage() {
       {/* Sidebar */}
       <Sidebar />
       {/* Profile Section */}
-      <div className="profile-main">
-        <main className="profile-content">
-          <h2 className="profile-title">Profile</h2>
-          <section className="profile-info">
-            {/* Profile Image Placeholder */}
-            <div
-              className="profile-avatar"
-              aria-label="Profile picture placeholder"
-              role="img"
-            />
-            {/* Profile Info */}
-            <div className="profile-details">
-              <p className="profile-username">User Name</p>
-              <p className="profile-email">example@example.com</p>
-              <p className="profile-meta">M 12 yrs</p>
-            </div>
+      {/* <div className="profile-main"> */}
+      <main className="profile-content">
+        <h2 className="profile-title">Profile</h2>
+        <section className="profile-info">
+          {/* Profile Image Placeholder */}
+          <div
+            className="profile-avatar"
+            aria-label="Profile picture placeholder"
+            role="img"
+          />
+          {/* Profile Info */}
+          <div className="profile-details">
+            <p className="profile-username">User Name</p>
+            <p className="profile-email">example@example.com</p>
+            <p className="profile-meta">M 12 yrs</p>
+          </div>
 
-            {/* Edit button */}
-            <button className="edit-button" aria-label="Edit profile">
-              Edit
-            </button>
-          </section>
+          {/* Edit button */}
+          <button className="edit-button" aria-label="Edit profile">
+            Edit
+          </button>
+        </section>
 
-          {/* Theme Section */}
-          <section className="theme-section">
-            <h3 className="theme-title">Choose Theme Color:</h3>
-            <div className="theme-options">
-              {colors.map((color) => (
-                <button
-                  key={color.name}
-                  onClick={() => handleThemeChange(color.value)}
-                  className="theme-button"
-                  style={{ backgroundColor: color.value }}
-                  title={color.name}
-                />
-              ))}
-            </div>
-          </section>
-        </main>
-      </div>
+        {/* Theme Section */}
+        <section className="theme-section">
+          <h3 className="theme-title">Choose Theme Color:</h3>
+          <div className="theme-options">
+            {colors.map((color) => (
+              <button
+                key={color.name}
+                onClick={() => handleThemeChange(color.value)}
+                className="theme-button"
+                style={{ backgroundColor: color.value }}
+                title={color.name}
+              />
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
+    // </div>
   );
 }

@@ -1,0 +1,159 @@
+@import "../scss/_variable.scss";
+
+.inventory-container {
+  display: flex;
+  height: 100vh;
+  background-color: lighten($secondary-color, 30%);
+}
+
+.inventory-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.inventory-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.inventory-category {
+  border-bottom-width: 1px;
+  border-color: $primary-color;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.active {
+  padding: 0.5rem 1rem;
+  margin-bottom: -0.125rem;
+  font-weight: 600;
+  background-color: transparent;
+  border-bottom-width: 0.325rem;
+  border-color: $primary-color;
+  color: $primary-color;
+}
+
+.inactive {
+  padding: 0.5rem 1rem;
+  margin-bottom: -0.125rem;
+  font-weight: 600;
+  background-color: transparent;
+  border-bottom-width: 0.325rem;
+  border-color: transparent;
+  color: $secondary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.inventory-table {
+  overflow-x: auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 4px $primary-color;
+
+  table {
+    min-width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background-color: lighten($secondary-color, 0%);
+    }
+
+    th {
+      padding: 1rem 0.75rem;
+      text-align: left;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      font-weight: 500;
+      color: darken($primary-color, 20%);
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+
+      &:nth-child(3) {
+        text-align: center;
+      }
+
+      &:nth-child(4) {
+        text-align: right;
+      }
+    }
+
+    tbody {
+      background-color: lighten($secondary-color, 30%);
+      color: lighten($primary-color, 0%);
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    tr {
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+        transition: background-color 0.3s;
+      }
+
+      .button {
+        background-color: $primary-color;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: red;
+      }
+    }
+
+    td {
+      padding: 1rem 0.75rem;
+
+      &.actions {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        &.delete {
+          color: rgb(220 38 38);
+        }
+      }
+
+      &:nth-child(3) {
+        text-align: center;
+      }
+      &:nth-child(4) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.empty {
+  text-align: center;
+  padding: 0 2rem;
+  color: $primary-color;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
