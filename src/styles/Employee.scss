@@ -1,31 +1,31 @@
 @import "../scss/_variable.scss";
 
-.inventory-container {
+.employee-container {
   display: flex;
   height: 100vh;
   background-color: lighten($secondary-color, 30%);
 }
 
-.inventory-main {
+.employee-main {
   flex: 2;
   display: flex;
   flex-direction: column;
 }
 
-.inventory-content {
+.employee-content {
   flex: 1;
   padding: 1.5rem;
   overflow: auto;
 }
 
-.inventory-title {
+.employee-title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.inventory-category {
+.employee-category {
   border-bottom-width: 1px;
   border-color: $primary-color;
   margin-bottom: 1.5rem;
@@ -57,7 +57,7 @@
   }
 }
 
-.inventory-table {
+.employee-table {
   overflow-x: auto;
   border-radius: 0.25rem;
   box-shadow: 0 1px 4px $primary-color;
@@ -79,14 +79,6 @@
       color: darken($primary-color, 20%);
       text-transform: uppercase;
       letter-spacing: 0.05rem;
-
-      &:nth-child(3) {
-        text-align: center;
-      }
-
-      &:nth-child(4) {
-        text-align: right;
-      }
     }
 
     tbody {
@@ -138,13 +130,6 @@
           }
         }
       }
-
-      &:nth-child(3) {
-        text-align: center;
-      }
-      &:nth-child(4) {
-        text-align: right;
-      }
     }
   }
 }
@@ -158,4 +143,24 @@
 .icon {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.modal {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: $primary-color;
+  border-radius: 9999px;
+  padding: 1rem;
+  box-shadow: 0 1px 1px $secondary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
+
+.picon {
+  width: 2rem;
+  height: 2rem;
 }

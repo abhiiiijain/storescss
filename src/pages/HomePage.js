@@ -83,11 +83,12 @@ const productSalesData = [
 
 export default function HomePage() {
   return (
-    <div className="home-container">
-      {/* Sidebar */}
-      <SideBar />
-      {/* Main Content */}
-      {/* <div className="home-main"> */}
+    <>
+      <div className="home-container">
+        {/* Sidebar */}
+        <SideBar />
+        {/* Main Content */}
+        {/* <div className="home-main"> */}
         <main className="home-content">
           <h2 className="home-title">Home</h2>
           {/* Sales and Profit Chart */}
@@ -147,6 +148,7 @@ export default function HomePage() {
           </div>
         </main>
       </div>
-    // </div>
+      {/* </div> */}
+    </>
   );
 }

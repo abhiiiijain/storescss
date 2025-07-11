@@ -1,31 +1,31 @@
 @import "../scss/_variable.scss";
 
-.inventory-container {
+.transaction-container {
   display: flex;
   height: 100vh;
   background-color: lighten($secondary-color, 30%);
 }
 
-.inventory-main {
+.transaction-main {
   flex: 2;
   display: flex;
   flex-direction: column;
 }
 
-.inventory-content {
+.transaction-content {
   flex: 1;
   padding: 1.5rem;
   overflow: auto;
 }
 
-.inventory-title {
+.transaction-title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.inventory-category {
+.transaction-category {
   border-bottom-width: 1px;
   border-color: $primary-color;
   margin-bottom: 1.5rem;
@@ -57,7 +57,7 @@
   }
 }
 
-.inventory-table {
+.transaction-table {
   overflow-x: auto;
   border-radius: 0.25rem;
   box-shadow: 0 1px 4px $primary-color;

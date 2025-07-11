@@ -1,0 +1,129 @@
+@import "../scss/_variable.scss";
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: $secondary-color;
+  backdrop-filter: blur(0.325rem);
+  z-index: 40;
+}
+
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal-container {
+  background-color: lighten($secondary-color, 30%);
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 1px 4px $primary-color;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  color: $primary-color;
+}
+
+.modal-form {
+  display: grid;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.form-lable {
+  text-align: center;
+  align-items: center;
+  font-weight: 500;
+  color: $primary-color;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  input {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid $primary-color;
+    background-color: lighten($secondary-color, 10%);
+    padding: 0.5rem 0.75rem;
+    outline: none;
+
+    &::placeholder {
+      color: $primary-color;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1px 4px $primary-color;
+    }
+  }
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    .input {
+      accent-color: $primary-color;
+    }
+  }
+}
+
+.form-footer {
+  text-align: center;
+  padding-top: 1rem;
+}
+.register {
+  padding: 0.5rem 0.5rem;
+  background-color: lighten($secondary-color, 30%);
+  color: $primary-color;
+  border-radius: 9999px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 0.75em;
+  right: 0.75rem;
+  color: $primary-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline-offset: 0.125rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
