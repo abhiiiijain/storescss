@@ -1,19 +1,21 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import "../styles/ProfilePage.scss"; // Assuming you have a CSS file for styles
+import "../scss/_themes.scss";
+import ThemeSwitcher from "./ThemeSwitcher";
 
-const colors = [
-  { name: "Blue", value: "#2563eb" },
-  { name: "Green", value: "#16a34a" },
-  { name: "Red", value: "#dc2626" },
-  { name: "Yellow", value: "#eab308" },
-  { name: "Purple", value: "#7c3aed" },
-];
+// const colors = [
+//   { name: "Blue", value: "#2563eb" },
+//   { name: "Green", value: "#16a34a" },
+//   { name: "Red", value: "#dc2626" },
+//   { name: "Yellow", value: "#eab308" },
+//   { name: "Purple", value: "#7c3aed" },
+// ];
 
 export default function ProfilePage() {
-  const handleThemeChange = (color) => {
-    document.documentElement.style.setProperty("--primary", color);
-  };
+  // const handleThemeChange = (color) => {
+  //   document.documentElement.style.setProperty("--primary", color);
+  // };
 
   return (
     <>
@@ -48,7 +50,8 @@ export default function ProfilePage() {
           <section className="theme-section">
             <h3 className="theme-title">Choose Theme Color:</h3>
             <div className="theme-options">
-              {colors.map((color) => (
+              <ThemeSwitcher />
+              {/* {colors.map((color) => (
                 <button
                   key={color.name}
                   onClick={() => handleThemeChange(color.value)}
@@ -56,7 +59,7 @@ export default function ProfilePage() {
                   style={{ backgroundColor: color.value }}
                   title={color.name}
                 />
-              ))}
+              ))} */}
             </div>
           </section>
         </main>
