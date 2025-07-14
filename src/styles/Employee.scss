@@ -83,14 +83,14 @@
 
     tbody {
       background-color: var(--secondary30l-color);
-      color: lighten(var(--primary-color), 0%);
+      color: var(--primary-color);
       font-size: 0.875rem;
       line-height: 1.25rem;
     }
 
     tr {
       &:hover {
-        background-color: var(--secondary10l-color);
+        background-color: var(--secondary50l-color);
         transition: background-color 0.3s;
       }
 

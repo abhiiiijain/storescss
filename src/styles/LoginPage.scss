@@ -96,10 +96,10 @@
     margin-top: 1.5rem;
     text-align: center;
     font-size: 0.875rem;
-    color: lighten(var(--primary-color), 10%);
+    color: var(--secondary20l-color);
 
     span {
-      color: lighten(var(--primary-color), 10%);
+      color: var(--secondary20l-color);
       font-weight: 500;
       cursor: pointer;
       text-decoration: underline;
