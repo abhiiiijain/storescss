@@ -3,7 +3,7 @@
 .home-container {
   display: flex;
   height: 100vh;
-  background-color: lighten($secondary-color, 30%);
+  background-color: var(--secondary30l-color);
 }
 
 .home-main {
@@ -27,8 +27,8 @@
 
 .home-details {
   border-radius: 0.5rem;
-  background-color: lighten($secondary-color, 50%);
-  box-shadow: 1px 1px 4px $primary-color;
+  background-color: var(--secondary50l-color);
+  box-shadow: 1px 1px 4px var(--primary-color);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }

@@ -16,7 +16,7 @@ export default function ThemeSwitcher() {
 
   return (
     <>
-      <div>
+      <div className="theme-options">
         {themes.map((theme) => (
           <button
             key={theme.name}

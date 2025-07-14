@@ -49,18 +49,7 @@ export default function ProfilePage() {
           {/* Theme Section */}
           <section className="theme-section">
             <h3 className="theme-title">Choose Theme Color:</h3>
-            <div className="theme-options">
-              <ThemeSwitcher />
-              {/* {colors.map((color) => (
-                <button
-                  key={color.name}
-                  onClick={() => handleThemeChange(color.value)}
-                  className="theme-button"
-                  style={{ backgroundColor: color.value }}
-                  title={color.name}
-                />
-              ))} */}
-            </div>
+            <ThemeSwitcher />
           </section>
         </main>
       </div>
