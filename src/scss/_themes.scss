@@ -1,27 +1,39 @@
 .theme-blue {
   --primary-color: #2563eb;
-  --primary10d-color: rgba(37, 99, 235, 1);
+  --primary10d-color: rgb(33, 89, 211);
   --secondary-color: rgba(37, 99, 235, 0.5);
-  --secondary20l-color: rgba(37, 99, 235, 0.4);
-  --secondary30l-color: rgba(37, 99, 235, 0.35);
+  --secondary20l-color: rgba(37, 99, 235, 0.1);
+  --secondary30l-color: rgba(37, 99, 235, 0.15);
 }
 
 .theme-green {
   --primary-color: #16a34a;
-  --secondary-color: rgba(#16a34a, 0.5);
+  --primary10d-color: rgb(19, 147, 66);
+  --secondary-color: rgba(22, 163, 74, 0.5);
+  --secondary20l-color: rgba(22, 163, 74, 0.1);
+  --secondary30l-color: rgba(22, 163, 74, 0.15);
 }
 
 .theme-red {
   --primary-color: #dc2626;
-  --secondary-color: rgba(#dc2626, 0.5);
+  --primary10d-color: rgb(198, 34, 34);
+  --secondary-color: rgba(220, 38, 38, 0.5);
+  --secondary20l-color: rgba(220, 38, 38, 0.1);
+  --secondary30l-color: rgba(220, 38, 38, 0.15);
 }
 
 .theme-yellow {
   --primary-color: #eab308;
-  --secondary-color: rgba(#eab308, 0.5);
+  --primary10d-color: rgb(212, 160, 7);
+  --secondary-color: rgba(234, 179, 8, 0.5);
+  --secondary20l-color: rgba(234, 179, 8, 0.1);
+  --secondary30l-color: rgba(234, 179, 8, 0.15);
 }
 
 .theme-purple {
   --primary-color: #7c3aed;
-  --secondary-color: rgba(#7c3aed, 0.5);
+  --primary10d-color: rgb(112, 47, 207);
+  --secondary-color: rgba(124, 58, 237, 0.5);
+  --secondary20l-color: rgba(124, 58, 237, 0.1);
+  --secondary30l-color: rgba(124, 58, 237, 0.15);
 }

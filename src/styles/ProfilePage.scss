@@ -73,8 +73,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--primary-color);
-  background-color: lighten($secondary-color, 20%);
-  background-color: var(--secondary-color);
+  background-color: var(--secondary20l-color);
   cursor: pointer;
   align-self: flex-start;
   user-select: none;
@@ -83,36 +82,19 @@
 .theme-section {
   margin-top: 2.5rem;
   max-width: 48rem;
-  // background-color: lighten($secondary-color, 30%);
-  background-color: var(--secondary-color);
+  background-color: var(--secondary30l-color);
   padding: 1.5rem;
   border-radius: 0.25rem;
-  // box-shadow: 1px 1px 4px $primary-color;
   box-shadow: 1px 1px 4px var(--primary-color);
 }
 
 .theme-title {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  // color: $primary-color;
   color: var(--primary-color);
 }
 
 .theme-options {
   display: flex;
   gap: 1rem;
-}
-
-.theme-button {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 9999px;
-  border-width: 0.125rem;
-  // border-color: $secondary-color;
-  border-color: var(--secondary-color);
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.5);
-  }
 }
