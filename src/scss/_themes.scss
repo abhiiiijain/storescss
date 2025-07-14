@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #2563eb;
+  --primary20d-color: rgb(29, 79, 188);
+  --primary10d-color: rgb(33, 89, 211);
+  --secondary-color: rgba(37, 99, 235, 0.5);
+  --secondary10l-color: rgba(37, 99, 235, 0.05);
+  --secondary20l-color: rgba(37, 99, 235, 0.1);
+  --secondary30l-color: rgba(37, 99, 235, 0.15);
+  --secondary50l-color: rgba(37, 99, 235, 0.25);
+}
+
 .theme-blue {
   --primary-color: #2563eb;
   --primary20d-color: rgb(29, 79, 188);

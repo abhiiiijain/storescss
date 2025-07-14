@@ -1,7 +1,7 @@
 @import "../scss/_variable.scss";
 
 .header-nav {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .header-logo {
-  background-color: var(--secondary30l-color);
+  background-color: var(--secondary50l-color);
   border-radius: 1rem;
   box-shadow: 0 1px 3px var(--primary-color);
 
@@ -39,14 +39,14 @@
   }
 
   .search-btn {
-    background-color: var(--primary-color);
+    background-color: transparent;
     border: none;
     cursor: pointer;
 
     .search-icon {
       width: 1.5rem;
       height: 1.5rem;
-      color: var(--secondary30l-color);
+      color: var(--secondary50l-color);
     }
 
     &:focus {
