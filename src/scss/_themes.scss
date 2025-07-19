@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #2563eb;
+  --primary20d-color: rgb(29, 79, 188);
+  --primary10d-color: rgb(33, 89, 211);
+  --secondary-color: rgba(37, 99, 235, 0.5);
+  --secondary10l-color: rgba(37, 99, 235, 0.05);
+  --secondary20l-color: rgba(37, 99, 235, 0.1);
+  --secondary30l-color: rgba(37, 99, 235, 0.15);
+  --secondary50l-color: rgba(37, 99, 235, 0.25);
+}
+
+.theme-blue {
+  --primary-color: #2563eb;
+  --primary20d-color: rgb(29, 79, 188);
+  --primary10d-color: rgb(33, 89, 211);
+  --secondary-color: rgba(37, 99, 235, 0.5);
+  --secondary10l-color: rgba(37, 99, 235, 0.05);
+  --secondary20l-color: rgba(37, 99, 235, 0.1);
+  --secondary30l-color: rgba(37, 99, 235, 0.15);
+  --secondary50l-color: rgba(37, 99, 235, 0.25);
+}
+
+.theme-green {
+  --primary-color: #16a34a;
+  --primary20d-color: rgb(17, 130, 59);
+  --primary10d-color: rgb(19, 147, 66);
+  --secondary-color: rgba(22, 163, 74, 0.5);
+  --secondary10l-color: rgba(22, 163, 74, 0.05);
+  --secondary20l-color: rgba(22, 163, 74, 0.1);
+  --secondary30l-color: rgba(22, 163, 74, 0.15);
+  --secondary50l-color: rgba(22, 163, 74, 0.25);
+}
+
+.theme-red {
+  --primary-color: #dc2626;
+  --primary20d-color: rgb(176, 30, 30);
+  --primary10d-color: rgb(198, 34, 34);
+  --secondary-color: rgba(220, 38, 38, 0.5);
+  --secondary10l-color: rgba(220, 38, 38, 0.05);
+  --secondary20l-color: rgba(220, 38, 38, 0.1);
+  --secondary30l-color: rgba(220, 38, 38, 0.15);
+  --secondary50l-color: rgba(220, 38, 38, 0.25);
+}
+
+.theme-yellow {
+  --primary-color: #eab308;
+  --primary20d-color: rgb(187, 143, 6);
+  --primary10d-color: rgb(212, 160, 7);
+  --secondary-color: rgba(234, 179, 8, 0.5);
+  --secondary10l-color: rgba(234, 179, 8, 0.05);
+  --secondary20l-color: rgba(234, 179, 8, 0.1);
+  --secondary30l-color: rgba(234, 179, 8, 0.15);
+  --secondary50l-color: rgba(234, 179, 8, 0.25);
+}
+
+.theme-purple {
+  --primary-color: #7c3aed;
+  --primary20d-color: rgb(99, 46, 190);
+  --primary10d-color: rgb(112, 52, 213);
+  --secondary-color: rgba(124, 58, 237, 0.5);
+  --secondary10l-color: rgba(124, 58, 237, 0.05);
+  --secondary20l-color: rgba(124, 58, 237, 0.1);
+  --secondary30l-color: rgba(124, 58, 237, 0.15);
+  --secondary50l-color: rgba(124, 58, 237, 0.25);
+}

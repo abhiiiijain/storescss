@@ -1,0 +1,17 @@
+.theme-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.theme-button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border-width: 0.125rem;
+  border-color: var(--secondary-color);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}

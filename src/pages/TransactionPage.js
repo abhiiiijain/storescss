@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { DownloadIcon } from "@heroicons/react/outline";
-import "../styles/Transaction.scss"
+import "../styles/Transaction.scss";
 
 const transactions = [
   {
@@ -81,149 +81,85 @@ export default function Transactions() {
 
         {/* Buy */}
         {activeTab === "buy" && (
-          <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl mx-auto mt-10">
-            <h2 className="text-2xl font-semibold mb-4 text-center">
-              Buy Items
-            </h2>
-            <div className="border-b border-gray-300 mb-6 flex gap-8"></div>
+          <div className="buy-container">
+            <h2 className="buy-title">Buy Items</h2>
+            <div classname="line"></div>
 
             {/* Customer */}
-            <div className="mb-6">
-              <div className="bg-white max-w-xl mx-auto flex rounded-lg shadow-lg overflow-hidden">
-                <div className="flex-1 p-6">
-                  <h3 className="text-lg font-medium mb-2">Customer</h3>
+            <div className="buy-wrapper">
+              <div className="buy-content">
+                <div className="buy-items">
+                  <h3 className="buy-subtitle">Customer</h3>
                 </div>
-                <div className="flex-1 p-6">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Address"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
+                <div className="buy-items">
+                  <input type="text" placeholder="Name" />
+                  <input type="text" placeholder="Phone Number" />
+                  <input type="text" placeholder="Address" />
                 </div>
               </div>
             </div>
-            <div className="border-b border-gray-300 mb-6 flex gap-8"></div>
+            <div classname="line"></div>
 
             {/* Product */}
-            <div className="mb-6">
-              <div className="bg-white max-w-xl mx-auto flex rounded-lg shadow-lg overflow-hidden">
-                <div className="flex-1 p-6">
-                  <h3 className="text-lg font-medium mb-2">Product</h3>
+            <div className="buy-wrapper">
+              <div className="buy-content">
+                <div className="buy-items">
+                  <h3 className="buy-subtitle">Product</h3>
                 </div>
-                <div className="flex-1 p-6">
-                  <input
-                    type="text"
-                    placeholder="Product Name"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  {/* <select className="w-full p-2 border bg-gray-300 rounded mb-2">
-                    <option>Select a product to view details</option>
-                    <option>20 in inventory, 85 Recommended limit</option>
-                    <option>No details</option>
-                  </select> */}
-
-                  <div className="text-sm text-gray-600 mb-2 overflow-auto text-center">
+                <div className="buy-items">
+                  <input type="text" placeholder="Product Name" />
+                  <div className="limit">
                     <p>Select a product to view details</p>
                     <p>/</p>
                     <p>20 in inventory, 85 Recommended limit</p>
                     <p>/</p>
                     <p>No details</p>
                   </div>
-
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="number"
-                    placeholder="No. of Items"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="date"
-                    placeholder="Expiry Date"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <div className="flex justify-center">
-                    <button className="text-primary text-sm p-2 underline border border-primary">
-                      + Add Product
-                    </button>
+                  <input type="text" placeholder="Price" />
+                  <input type="number" placeholder="No. of Items" />
+                  <input type="date" placeholder="Expiry Date" />
+                  <div className="add">
+                    <button>+ Add Product</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mt-6">
-              <button className="bg-primary text-white p-2 w-24 text-center rounded-full ">
-                Buy
-              </button>
+            <div className="submit">
+              <button>Buy</button>
             </div>
           </div>
         )}
         {/* Sell */}
         {activeTab === "sell" && (
-          <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl mx-auto mt-10">
-            <h2 className="text-2xl font-semibold mb-4 text-center">
-              Sell Items
-            </h2>
-            <div className="border-b border-gray-300 mb-6 flex gap-8"></div>
+          <div className="buy-container">
+            <h2 className="buy-title">Sell Items</h2>
+            <div classname="line"></div>
 
             {/* Customer */}
-            <div className="mb-6">
-              <div className="bg-white max-w-xl mx-auto flex rounded-lg shadow-lg overflow-hidden">
-                <div className="flex-1 p-6">
-                  <h3 className="text-lg font-medium mb-2">Customer</h3>
+            <div className="buy-wrapper">
+              <div className="buy-content">
+                <div className="buy-items">
+                  <h3 className="buy-subtitle">Customer</h3>
                 </div>
-                <div className="flex-1 p-6">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Address"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
+                <div className="buy-items">
+                  <input type="text" placeholder="Name" />
+                  <input type="text" placeholder="Phone Number" />
+                  <input type="text" placeholder="Address" />
                 </div>
               </div>
             </div>
-            <div className="border-b border-gray-300 mb-6 flex gap-8"></div>
+            <div classname="line"></div>
 
             {/* Product */}
-            <div className="mb-6">
-              <div className="bg-white max-w-xl mx-auto flex rounded-lg shadow-lg overflow-hidden">
-                <div className="flex-1 p-6">
-                  <h3 className="text-lg font-medium mb-2">Product</h3>
+            <div className="buy-wrapper">
+              <div className="buy-content">
+                <div className="buy-items">
+                  <h3 className="buy-subtitle">Product</h3>
                 </div>
-                <div className="flex-1 p-6">
-                  <input
-                    type="text"
-                    placeholder="Product Name"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  {/* <select className="w-full p-2 border bg-gray-300 rounded mb-2">
-                    <option>Select a product to view details</option>
-                    <option>20 in inventory, 85 Recommended limit</option>
-                    <option>No details</option>
-                  </select> */}
+                <div className="buy-items">
+                  <input type="text" placeholder="Product Name" />
 
-                  <div className="text-sm text-gray-600 mb-2 overflow-auto text-center">
+                  <div className="limit">
                     <p>Select a product to view details</p>
                     <p>/</p>
                     <p>20 in inventory, 85 Critical limit</p>
@@ -231,33 +167,17 @@ export default function Transactions() {
                     <p>No details</p>
                   </div>
 
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="number"
-                    placeholder="No. of Items"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <input
-                    type="date"
-                    placeholder="Expiry Date"
-                    className="w-full p-2 border bg-gray-300 rounded mb-2"
-                  />
-                  <div className="flex justify-center">
-                    <button className="text-primary text-sm p-2 underline border border-primary">
-                      + Add Product
-                    </button>
+                  <input type="text" placeholder="Price" />
+                  <input type="number" placeholder="No. of Items" />
+                  <input type="date" placeholder="Expiry Date" />
+                  <div className="add">
+                    <button>+ Add Product</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mt-6">
-              <button className="bg-primary text-white p-2 w-24 text-center rounded-full ">
-                Sell
-              </button>
+            <div className="submit">
+              <button>Sell</button>
             </div>
           </div>
         )}
