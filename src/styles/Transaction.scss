@@ -1,9 +1,15 @@
 @import "../scss/_variable.scss";
+@import "../scss/_mixins.scss";
 
 .transaction-container {
   display: flex;
   height: 100vh;
   background-color: var(--secondary30l-color);
+
+  @include respond("sm") {
+    flex-direction: row;
+    height: auto;
+  }
 }
 
 .transaction-main {
@@ -16,6 +22,10 @@
   flex: 1;
   padding: 1.5rem;
   overflow: auto;
+
+  @include respond("sm") {
+    padding: 1rem;
+  }
 }
 
 .transaction-title {
@@ -23,6 +33,10 @@
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+
+  @include respond("sm") {
+    font-size: 1.25rem;
+  }
 }
 
 .transaction-category {
@@ -31,6 +45,12 @@
   margin-bottom: 1.5rem;
   display: flex;
   gap: 2rem;
+
+  @include respond("sm") {
+    gap: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+  }
 }
 
 .active {
@@ -153,6 +173,10 @@
   text-align: center;
   padding: 0 2rem;
   color: var(--primary-color);
+
+  @include respond("sm") {
+    padding: 0 1rem;
+  }
 }
 
 .icon {
@@ -170,6 +194,11 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 2.5rem;
+
+  @include respond("sm") {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .buy-title {
@@ -179,6 +208,10 @@
   margin-bottom: 1rem;
   text-align: center;
   color: var(--primary-color);
+
+  @include respond("sm") {
+    font-size: 1.25rem;
+  }
 }
 
 .line {
@@ -187,6 +220,12 @@
   margin-bottom: 1.5rem;
   display: flex;
   gap: 2rem;
+
+  @include respond("sm") {
+    gap: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+  }
 }
 
 .buy-wrapper {
@@ -202,11 +241,20 @@
   border-radius: 0.5rem;
   box-shadow: 0 1px 4px var(--primary-color);
   overflow: hidden;
+
+  @include respond("sm") {
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
 
 .buy-items {
   flex: 1;
   padding: 1.5rem;
+
+  @include respond("sm") {
+    padding: 1rem;
+  }
 }
 
 .buy-subtitle {
@@ -215,6 +263,10 @@
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
+
+  @include respond("sm") {
+    font-size: 1rem;
+  }
 }
 
 input {

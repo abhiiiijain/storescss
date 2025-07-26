@@ -1,9 +1,15 @@
 @import "../scss/_variable.scss";
+@import "../scss/_mixins.scss";
 
 .home-container {
   display: flex;
   height: 100vh;
   background-color: var(--secondary30l-color);
+
+  @include respond("sm") {
+    flex-direction: row;
+    height: auto;
+  }
 }
 
 .home-main {
@@ -16,6 +22,14 @@
   flex: 1;
   padding: 1.5rem;
   overflow: auto;
+
+  @include respond("sm") {
+    padding: 1rem;
+  }
+
+  @include respond("lg") {
+    padding: 2rem;
+  }
 }
 
 .home-title {
@@ -23,6 +37,10 @@
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+
+  @include respond("sm") {
+    font-size: 1.25rem;
+  }
 }
 
 .home-details {
@@ -31,6 +49,14 @@
   box-shadow: 1px 1px 4px var(--primary-color);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+
+  @include respond("sm") {
+    padding: 1rem;
+  }
+
+  @include respond("lg") {
+    padding: 2rem;
+  }
 }
 
 .home-subtitle {
@@ -39,4 +65,12 @@
   line-height: 1.75rem;
   font-weight: 600;
   margin-bottom: 1rem;
+
+  @include respond("sm") {
+    font-size: 1rem;
+  }
+
+  @include respond("lg") {
+    font-size: 1.25rem;
+  }
 }

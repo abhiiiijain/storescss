@@ -1,4 +1,5 @@
 @import "../scss/_variable.scss";
+@import "../scss/_mixins.scss";
 
 .sidebar {
   width: 12rem;
@@ -6,18 +7,48 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+
+  @include respond("sm") {
+    width: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0 -0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+  }
+
+  @include respond("lg") {
+    width: 14rem;
+  }
 }
 
 .sidebar-nav {
   flex: 1;
   padding-top: 1.5rem;
+
+  @include respond("sm") {
+    padding-top: 0;
+    // display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 .sidebar-list {
   list-style: none;
   padding-left: 1.5rem;
   color: var(--primary-color);
-  //   color: #586e75
+
+  @include respond("sm") {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 .sidebar-item {
@@ -25,6 +56,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  @include respond("sm") {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .sidebar-link {
@@ -36,9 +71,23 @@
   &:hover {
     color: var(--primary20d-color);
   }
+
+  @include respond("sm") {
+    flex-direction: column;
+    font-size: 0.75rem;
+  }
 }
 
 .sidebar-icon {
   margin-right: 0.5rem;
   font-size: 1.125rem;
+
+  @include respond("sm") {
+    margin-right: 0;
+    font-size: 1rem;
+  }
+
+  @include respond("lg") {
+    font-size: 1.25rem;
+  }
 }

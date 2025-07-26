@@ -1,9 +1,15 @@
 @import "../scss/_variable.scss";
+@import "../scss/_mixins.scss";
 
 .inventory-container {
   display: flex;
   height: 100vh;
   background-color: var(--secondary30l-color);
+
+  @include respond("sm") {
+    flex-direction: row;
+    height: auto;
+  }
 }
 
 .inventory-main {
@@ -16,6 +22,14 @@
   flex: 1;
   padding: 1.5rem;
   overflow: auto;
+
+  @include respond("sm") {
+    padding: 1rem;
+  }
+
+  @include respond("lg") {
+    padding: 2rem;
+  }
 }
 
 .inventory-title {
@@ -23,6 +37,10 @@
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+
+  @include respond("sm") {
+    font-size: 1.25rem;
+  }
 }
 
 .inventory-category {
@@ -31,24 +49,30 @@
   margin-bottom: 1.5rem;
   display: flex;
   gap: 2rem;
+
+  @include respond("sm") {
+    gap: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+  }
 }
 
-.active {
-  padding: 0.5rem 1rem;
-  margin-bottom: -0.125rem;
-  font-weight: 600;
-  background-color: transparent;
-  border-bottom-width: 0.325rem;
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-}
-
+.active,
 .inactive {
   padding: 0.5rem 1rem;
   margin-bottom: -0.125rem;
   font-weight: 600;
   background-color: transparent;
   border-bottom-width: 0.325rem;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.active {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.inactive {
   border-color: transparent;
   color: var(--secondary-color);
 
@@ -87,6 +111,11 @@
       &:nth-child(4) {
         text-align: right;
       }
+
+      @include respond("sm") {
+        font-size: 0.7rem;
+        padding: 0.75rem 0.5rem;
+      }
     }
 
     tbody {
@@ -94,6 +123,10 @@
       color: var(--primary-color);
       font-size: 0.875rem;
       line-height: 1.25rem;
+
+      @include respond("sm") {
+        font-size: 0.75rem;
+      }
     }
 
     tr {
@@ -120,6 +153,10 @@
         gap: 0.5rem;
         font-size: 1.125rem;
         line-height: 1.75rem;
+
+        @include respond("sm") {
+          gap: 0.25rem;
+        }
       }
 
       button {
@@ -142,8 +179,13 @@
       &:nth-child(3) {
         text-align: center;
       }
+
       &:nth-child(4) {
         text-align: right;
+      }
+
+      @include respond("sm") {
+        padding: 0.75rem 0.5rem;
       }
     }
   }
@@ -153,9 +195,24 @@
   text-align: center;
   padding: 0 2rem;
   color: var(--primary-color);
+
+  @include respond("sm") {
+    padding: 0 1rem;
+    font-size: 0.875rem;
+  }
 }
 
 .icon {
   width: 1.25rem;
   height: 1.25rem;
+
+  @include respond("sm") {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  @include respond("lg") {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
