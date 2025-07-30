@@ -3,6 +3,8 @@ import Sidebar from "../components/Sidebar";
 import "../styles/ProfilePage.scss"; // Assuming you have a CSS file for styles
 import "../scss/_themes.scss";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 // const colors = [
 //   { name: "Blue", value: "#2563eb" },
@@ -16,6 +18,15 @@ export default function ProfilePage() {
   // const handleThemeChange = (color) => {
   //   document.documentElement.style.setProperty("--primary", color);
   // };
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    const result = await logout();
+    if (result.success) {
+      navigate("/");
+    }
+  };
 
   return (
     <>
@@ -35,14 +46,17 @@ export default function ProfilePage() {
             />
             {/* Profile Info */}
             <div className="profile-details">
-              <p className="profile-username">User Name</p>
-              <p className="profile-email">example@example.com</p>
-              <p className="profile-meta">M 12 yrs</p>
+              <p className="profile-username">{user?.name}</p>
+              <p className="profile-email">{user?.email}</p>
+              <p className="profile-meta">Owner: {user.shopName}</p>
             </div>
 
             {/* Edit button */}
             <button className="edit-button" aria-label="Edit profile">
               Edit
+            </button>
+            <button onClick={handleLogout} className="edit-button" aria-label="Logout">
+              Logout
             </button>
           </section>
 
