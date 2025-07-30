@@ -1,9 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { useAuth } from "../context/AuthContext";
 import logo from "../images/inventory1.png";
 import "../styles/Header.scss";
 
 export default function Header() {
+  // const { user, logout } = useAuth();
+  // const navigate = useNavigate();
+
+  // const handleLogout = async () => {
+  //   const result = await logout();
+  //   if (result.success) {
+  //     navigate("/");
+  //   }
+  // };
+
   return (
     <>
       {/* routing to be hided */}
@@ -47,6 +58,14 @@ export default function Header() {
             </svg>
           </button>
         </div>
+
+        {/* User Info and Logout */}
+        {/* <div className="header-user">
+          <span className="user-name">Welcome, {user?.name}</span>
+          <button onClick={handleLogout} className="logout-btn">
+            Logout
+          </button>
+        </div> */}
       </nav>
     </>
   );
